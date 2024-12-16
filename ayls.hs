@@ -37,12 +37,9 @@ charToInt :: Char -> Int
 charToInt ch = fromEnum ch - fromEnum '0'
 
 -- Outras
-fromIntegral tam -- transforma em double o int tam
-(filter (\x -> x >= 0.1 && x <= 0.3) str) -- aplica o filtro pegando apenas os elementos x de str que atendem as condicoes
-[expressao que usa variavel | variavel <- lista, condicao] -- compreensao de listas
-
-
-
+--fromIntegral tam -- transforma em double o int tam
+--(filter (\x -> x >= 0.1 && x <= 0.3) str) -- aplica o filtro pegando apenas os elementos x de str que atendem as condicoes
+--[expressao que usa variavel | variavel <- lista, condicao] -- compreensao de listas
 
 
 {-1.
@@ -56,3 +53,5 @@ fromIntegral tam -- transforma em double o int tam
 
 {-4.
 -}
+
+
