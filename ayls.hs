@@ -13,6 +13,18 @@ quicksort _ [] = []
 quicksort cmp (x:xs) = quicksort cmp [y | y <- xs, y `cmp` x == LT]
                         ++ [x] ++ quicksort cmp [y | y <- xs, y `cmp` x /= LT]
 
+merge :: [Int] -> [Int] -> [Int]
+merge [] ys = ys
+merge xs [] = xs
+merge (x:xs) (y:ys) | x <= y    = x : merge xs (y:ys)
+                    | otherwise = y : merge (x:xs) ys
+
+mergeSort :: [Int] -> [Int]
+mergeSort []  = []
+mergeSort [x] = [x]
+mergeSort xs  = merge (mergeSort (take n xs)) (mergeSort (drop n xs))
+                where n = length xs `div` 2
+
 -- Em strings
 --take x str           -> pega os x primeiros elementos da string 
 --drop x str           -> apaga os x primeiros elementos da string
